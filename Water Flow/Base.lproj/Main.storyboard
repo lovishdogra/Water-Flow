@@ -29,6 +29,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ds-cb-sI7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrH-IL-0hg" customClass="PushButtonView" customModule="Water_Flow" customModuleProvider="target">
                                 <rect key="frame" x="275" y="461" width="50" height="50"/>
@@ -42,6 +45,9 @@
                                         <color key="value" red="1" green="0.1811121644" blue="0.28343569159999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgb-QV-Dyu"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BL0-TW-2jy" customClass="CounterView" customModule="Water_Flow" customModuleProvider="target">
                                 <rect key="frame" x="185" y="52" width="230" height="230"/>
@@ -59,8 +65,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJo-Ff-WWP">
-                                <rect key="frame" x="279" y="156" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJo-Ff-WWP">
+                                <rect key="frame" x="293" y="156" width="14" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Xh2-0r-nXt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -70,12 +79,18 @@
                         <constraints>
                             <constraint firstItem="N75-gF-hqc" firstAttribute="top" secondItem="BL0-TW-2jy" secondAttribute="bottom" constant="44" id="0Wn-lv-rbK"/>
                             <constraint firstItem="N75-gF-hqc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3iC-tf-mYJ"/>
+                            <constraint firstItem="dJo-Ff-WWP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6k-z7-rRd"/>
                             <constraint firstItem="BL0-TW-2jy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="NL2-lf-NMV"/>
                             <constraint firstItem="mrH-IL-0hg" firstAttribute="top" secondItem="N75-gF-hqc" secondAttribute="bottom" constant="35" id="SKs-Cc-6Ma"/>
                             <constraint firstItem="BL0-TW-2jy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TMS-pm-fJD"/>
                             <constraint firstItem="mrH-IL-0hg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UFh-MY-0PB"/>
+                            <constraint firstItem="dJo-Ff-WWP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="136" id="mbz-KA-HzM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLable" destination="dJo-Ff-WWP" id="LSu-HU-dNo"/>
+                        <outlet property="counterView" destination="BL0-TW-2jy" id="76C-Tq-rk6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
